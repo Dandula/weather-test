@@ -18,11 +18,11 @@
                 <tbody>
                 @foreach ($data as $item)
                     <tr>
-                        <th scope="row">{{ $item['time'] }}</th>
-                        <td>{{ $item['atmosphere'] }}</td>
-                        <td>{{ $item['temperature'] }}</td>
-                        <td>{{ $item['wind'] }}</td>
-                        <td>{{ $item['precipitation'] }}</td>
+                        <th scope="row">{{ @$item['time'] }}</th>
+                        <td>{{ @$item['atmosphere'] }}</td>
+                        <td>{{ @$item['temperature'] }}</td>
+                        <td>{{ @$item['wind'] }}</td>
+                        <td>{{ @$item['precipitation'] }}</td>
                     </tr>
                 @endforeach
                 </tbody>
