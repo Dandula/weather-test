@@ -55,7 +55,7 @@ class WeatherParsingService
         foreach ($container->find('.widget__row_temperature .value') as $key => $item) {
             $temperature = $item->find('.unit_temperature_c', 0)->innertext;
 
-            $data[$key]['temperature'] = $temperature . '°C';
+            $data[$key]['temperature'] = html_entity_decode($temperature) . '°C';
         }
 
         foreach ($container->find('.widget__row_wind-or-gust > .widget__item') as $key => $item) {
